@@ -5,7 +5,7 @@ Pylint will check code in the src directory only!
 import pandas as pd
 
 
-class Kp:
+class KP:
     '''
     Knapsack ploblem can be evaluated.
     '''
@@ -23,8 +23,7 @@ class Kp:
         '''
         total_cost = self.value.sum()
         total_weight = self.weight.sum()
-        if total_weight <= self.max_weight:
-            return total_cost
-        else:
-            return total_cost - self.afa * (total_weight - self.max_weight)
+        if total_weight > self.max_weight:
+            total_cost = total_cost - self.afa * (total_weight - self.max_weight)
+        return total_cost
 

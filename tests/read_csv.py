@@ -2,10 +2,10 @@ import unittest
 
 import pandas
 
-from src import read_csv
+from src.read_csv import load_data
 
 
 class ReadCsvTest(unittest.TestCase):
     def test_read_Csv(self):
-        data = read_csv.load_data()
+        data = load_data()
         self.assertIsInstance(data, pandas.DataFrame)

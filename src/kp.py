@@ -26,4 +26,8 @@ class KP:
         if total_weight > self.max_weight:
             total_cost = total_cost - self.afa * (total_weight - self.max_weight)
         return total_cost
-
+    def latertodo():
+        '''
+        to do
+        '''
+        return 0

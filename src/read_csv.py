@@ -4,24 +4,21 @@ read csv module with 3 functions.
 import urllib.request
 import pandas as pd
 
-def fetch_data():
+def fetch_data(path,filename):
     '''
     fuction to fetch data.
     '''
-    path = "https://github.com/EKU-Summer-2021/intelligent_system_data/blob/main/" \
-    "Intelligent%20System%20Data/KP/KP_10.csv "
-    urllib.request.urlretrieve(path, "10.csv")
+    urllib.request.urlretrieve(path, filename)
 
-def load_data():
+def load_data(path,filename):
     '''
     fuction to load data.
     '''
-    fetch_data()
-    csv_path = "10.csv"
-    return pd.read_csv(csv_path, names=["w", "v"])
+    fetch_data(path,filename)
+    return pd.read_csv(filename, names=["w", "v"])
 
 def summary_data():
     '''
     fuction to summary data.
     '''
-    return load_data().describe()
+    return load_data(path,filename).describe()

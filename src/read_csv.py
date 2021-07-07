@@ -17,7 +17,7 @@ def load_data(path,filename):
     fetch_data(path,filename)
     return pd.read_csv(filename, names=["w", "v"])
 
-def summary_data():
+def summary_data(path,filename):
     '''
     fuction to summary data.
     '''
